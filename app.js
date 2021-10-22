@@ -221,6 +221,7 @@ for(let i = 0; i < arr1.length; i++) {
         lowest = arr1[i];
     }
 }
+console.log(arr1)
 console.log(arr1.sort(function(a, b){return a-b}) )
 
 
