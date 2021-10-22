@@ -49,8 +49,8 @@ let reversed  = '';
 for(let i = (str.length - 1); i > -1; i--) {
     reversed += str[i]
 }
-console.log('Saylani')
-console.log(reversed)
+console.log('string: Saylani')
+console.log('string reversed:',reversed)
 
 //5. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar. 
 
@@ -97,10 +97,79 @@ document.getElementById("dorand").addEventListener ("click", hiderand, false);
 
 //8. Write a JavaScript program to calculate days left until next 14 August.
 
-let datetoday = date.getDate()
+let daystillday = date.getDate() + (date.getMonth() * 31) + (date.getFullYear() * 365);
+let setdate = new Date("8/14/2022"); // 14th August, 2022
+let dayssetdate = setdate.getDate() + (setdate.getMonth() * 31) + (setdate.getFullYear() * 365);
+let daysleft = dayssetdate - daystillday;
+console.log('days left till next 14th August: ', daysleft)
 
 
+//9. Write a JavaScript program to calculate multiplication and division of two numbers.
 
+
+function mulnums() {
+    var num1 = Number(document.getElementById('in-num1').value);
+    var num2 = Number(document.getElementById('in-num2').value);
+    let result = num1 * num2;
+    document.getElementById('res-calc').innerText = result;
+}
+
+function divnums() {
+    var num1 = Number(document.getElementById('in-num1').value);
+    var num2 = Number(document.getElementById('in-num2').value);
+    let result = num1 / num2;
+    document.getElementById('res-calc').innerText = result;
+}
+
+document.getElementById("mul-nums").addEventListener ("click", mulnums, false);
+document.getElementById("div-nums").addEventListener ("click", divnums, false);
+
+
+//10. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit. 
+// [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
+
+function convertthetemp() {
+    let deg = Number(document.getElementById('in-deg').value);
+    let fah = Number(document.getElementById('in-fah').value); 
+
+    if (deg === 0 && fah > 0) {
+        document.getElementById('in-deg').value = (fah - 32) * (5/9);
+    } else if (deg > 0 && fah === 0) {
+        document.getElementById('in-fah').value = (deg * 9/5) + 32;
+    } else {
+        alert('enter a single value at a time');
+        document.getElementById('in-deg').value = null;
+        document.getElementById('in-fah').value = null;
+    }
+}
+document.getElementById("conv-temp").addEventListener("click", convertthetemp, false);
+
+
+// 11. Write a JavaScript program to compute the sum of the two given Numbers. 
+// If the two values are same, then returns triple their sum.
+ 
+function calcsum() {
+    var num1 = Number(document.getElementById('number1').value);
+    var num2 = Number(document.getElementById('number2').value);
+    let result = num1 + num2;
+    if (num1 !== num2) {
+        document.getElementById('sum-calc').innerText = result;
+    } else if ( num1 === num2) {
+        document.getElementById('sum-calc').innerText = result * 3;
+    }
+} document.getElementById("calc-btn").addEventListener("click", calcsum, false);
+
+
+//12. Write a JavaScript program to check whether a given Number is within 20 of 100 or 400. //not understood
+
+// 13. Write a JavaScript program to find the largest of three given Numbers.
+let nums = [22,28,25,78,89,87,58,98,78,87];
+let highest = 0;
+for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > highest) {
+        highest = nums[i];
+    }
+} console.log('the highest of these is: ',highest);
 
 
 
