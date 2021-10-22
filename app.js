@@ -6,12 +6,19 @@ function main() {
 
 let date = new Date()
 let currentday = date.getDay();
-let currenttime = date.getTime();
+let currenthours = date.getHours()
 let currentmins = date.getMinutes();
 let currentsecs = date.getSeconds();
 
-console.log('Today is : ', currentday)
-console.log('Current time is : ', currenttime, ' : ', currentmins, ' : ');
+let twelvehr;
+let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+if (currenthours < 12 && currenthours > 0) {
+    twelvehr = currenthours + ' AM'
+} else if (currenthours < 24 && currenthours >= 12) {
+    twelvehr = currenthours + ' PM'
+}
+console.log('Today is : ', days[currentday - 1])
+console.log('Current time is : ', twelvehr, ' : ', currentmins, ' : ', currentsecs  );
 
 
 
