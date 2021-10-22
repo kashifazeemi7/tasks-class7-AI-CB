@@ -194,6 +194,40 @@ let minutes = hrs * 60;
 console.log('days: ' + givendays + ', hrs: ' + hrs + ' , minutes: ' + minutes)
 
 
+//16. Write a JavaScript program to reverse the elements of a given array, you can not use Array.reverse() do it with loop.
+
+let array = ['a', 'b', 'c', 1, 2, 3, true, NaN];
+let newArray = [];
+for(let i = array.length - 1; i > -1; i-- ) {
+    newArray.push(array[i])
+} 
+console.log('old array: ', array);
+console.log('reversed array: ', newArray);
+
+
+// 17. Write a JavaScript program to find the larger value between the first or last
+//  and set all the other elements with that value. Display the new array.
+
+let arr1 = [22, 25,8, 87, 78, 7, 9, 448, 48, 45, 97, 1, 56, 664, 45]
+let greatest = 0;
+let lowest = 1000;
+let sortedarray = [];
+
+for(let i = 0; i < arr1.length; i++) {
+    if (arr1[i] > greatest) {
+        greatest = arr1[i];
+    } 
+    if (arr1[i] < lowest) {
+        lowest = arr1[i];
+    }
+}
+console.log(arr1.sort(function(a, b){return a-b}) )
+
+
+//18. Write a JavaScript program to find the kth greatest element of a given array of Numbers
+
+
+
 
 
 
