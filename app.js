@@ -50,7 +50,7 @@ for(let i = (str.length - 1); i > -1; i--) {
     reversed += str[i]
 }
 console.log('string: Saylani')
-console.log('string reversed:',reversed)
+console.log('string reversed:', reversed)
 
 //5. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar. 
 
@@ -65,7 +65,14 @@ function knowyouryr() {
 document.getElementById ("doleap").addEventListener ("click", knowyouryr, false);
 
 
-// //6. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050. //not understood
+// //6. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
+let startdate = new Date();
+startdate.setFullYear(2014)
+let enddate =  new Date();
+enddate.setFullYear(2050);
+
+
+
 
 // 7. Write a JavaScript program where the program takes a random Number between 1 to 10, 
 // the user is then prompted to input a guess number. If the user input matches with guess number, 
@@ -128,7 +135,7 @@ document.getElementById("div-nums").addEventListener ("click", divnums, false);
 //10. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit. 
 // [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
 
-function convertthetemp() {
+function convertthetemp() { 
     let deg = Number(document.getElementById('in-deg').value);
     let fah = Number(document.getElementById('in-fah').value); 
 
