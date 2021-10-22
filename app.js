@@ -172,6 +172,28 @@ for (let i = 0; i < nums.length; i++) {
 } console.log('the highest of these is: ',highest);
 
 
+//14. Write a JavaScript program to capitalize the first letter of each word of a given string.
+
+let word = 'kashif';
+let arr = word.split("");
+let capitalized = '';
+for (let i = 0; i < arr.length; i++) {
+    if (i === 0) {
+        capitalized += arr[i].toUpperCase();
+    } else {
+        capitalized += arr[i]
+    }
+} 
+console.log('uncapitalized: ', word)
+console.log('capitalized: ', capitalized)
+
+//15. Write a JavaScript program to convert a given days to hours and minutes.
+let givendays = 25;
+let hrs = givendays  * 24;
+let minutes = hrs * 60;
+console.log('days: ' + givendays + ', hrs: ' + hrs + ' , minutes: ' + minutes)
+
+
 
 
 
