@@ -66,10 +66,13 @@ document.getElementById ("doleap").addEventListener ("click", knowyouryr, false)
 
 
 // //6. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050.
-let startdate = new Date();
-startdate.setFullYear(2014)
-let enddate =  new Date();
-enddate.setFullYear(2050);
+
+for (let yr = 2014; yr <= 2050; yr++)
+    {
+    var d = new Date(yr, 0, 1);
+    if ( d.getDay() === 0 )
+        console.log("1st January is being a Sunday  " + yr );
+    }
 
 
 
@@ -169,6 +172,17 @@ function calcsum() {
 
 //12. Write a JavaScript program to check whether a given Number is within 20 of 100 or 400. //not understood
 
+function testhundred(x) {
+    return ((Math.abs(100 - x) <= 20) ||
+       (Math.abs(400 - x) <= 20));
+  }
+  
+  console.log(testhundred(10));
+  console.log(testhundred(90));
+  console.log(testhundred(99));
+  console.log(testhundred(199));
+  console.log(testhundred(200));
+
 // 13. Write a JavaScript program to find the largest of three given Numbers.
 let nums = [22,28,25,78,89,87,58,98,78,87];
 let highest = 0;
@@ -233,6 +247,7 @@ console.log(arr1.sort(function(a, b){return a-b}) )
 
 
 //18. Write a JavaScript program to find the kth greatest element of a given array of Numbers
+
 
 
 
